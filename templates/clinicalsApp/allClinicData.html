@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All records</title>
+  </head>
+  <body>
+    <h2>All Patients' records</h2>
+    <table border=4>
+      <thead>
+        <th>Clinical Data ID</th>
+        <th>Symptom 1</th>
+        <th>Symptom 2</th>
+        <th>Symptom 3</th>
+        <th>Symptom 4</th>
+        <th>Symptom 5</th>
+        <th>Patient</th>
+        <th>Additional Information</th>
+        <th>Time of Entry</th>
+      </thead>
+      {% for clinical_data in all_clinic_data %}
+      <tr>
+        <td>{{ clinical_data.id }}</td>
+        <td>{{ clinical_data.symptom1 }}</td>
+        <td>{{ clinical_data.symptom2 }}</td>
+        <td>{{ clinical_data.symptom3 }}</td>
+        <td>{{ clinical_data.symptom4 }}</td>
+        <td>{{ clinical_data.symptom5 }}</td>
+        <td>{{ clinical_data.patient }}</td>
+        <td>{{ clinical_data.additional_info }}</td>
+        <td>{{ clinical_data.entryTime }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  </body>
+</html>
